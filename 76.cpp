@@ -1,0 +1,22 @@
+// 76. Take two integers as input and print their greatest common divisor (GCD).  
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Enter the first integer: ";
+    cin >> a;
+    cout << "Enter the second integer: ";
+    cin >> b;
+
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    cout << "GCD is " << a << endl;
+    return 0;
+}
